@@ -5,12 +5,12 @@
 @section('content')
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
     <h2 style="color:#6b4f3a;">Jurnalul lui {{ Auth::user()->name }}</h2>
-    <a href="{{ route('entries.create') }}" class="btn btn-primary">+ Intrare nouă</a>
+    <a href="{{ route('entries.create') }}" class="btn btn-primary">+ Notita nouă</a>
 </div>
 
 @if($entries->isEmpty())
     <div class="card" style="text-align:center; padding:2.5rem;">
-        <p style="color:#9e8878; font-size:1.05rem;">Nu ai nicio intrare încă. Adaugă prima ta pagină!</p>
+        <p style="color:#9e8878; font-size:1.05rem;">Nu ai nicio notita încă. Adaugă prima ta pagină!</p>
     </div>
 @else
     @foreach($entries as $entry)

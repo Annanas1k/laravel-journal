@@ -197,7 +197,8 @@
     <a href="{{ route('home') }}" class="logo">📔 Jurnalul Meu</a>
     <div class="nav-links">
         @auth
-            <a href="{{ route('entries.index') }}">Intrări</a>
+            <a href="{{ route('profile.edit') }}">Editeaza profil</a>
+            <a href="{{ route('entries.index') }}">Notite</a>
             <a href="{{ route('entries.create') }}">+ Adaugă</a>
             <form action="{{ route('logout') }}" method="POST">
                 @csrf
@@ -230,7 +231,7 @@
 </div>
 
 <footer>
-    Jurnal Personal &copy; {{ date('Y') }}
+    Jurnal Personal :) &copy; {{ date('Y') }}
 </footer>
 
 </body>

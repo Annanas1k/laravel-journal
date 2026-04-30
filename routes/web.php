@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EntryController;
+use App\Http\Controllers\ProfileController; 
 use Illuminate\Support\Facades\Route;
 
 // Pagina principală (publică)
@@ -23,5 +24,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Rute jurnal (doar pentru autentificați)
 Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::put('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::resource('entries', EntryController::class);
 });

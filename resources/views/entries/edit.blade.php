@@ -5,7 +5,7 @@
 @section('content')
 <div style="max-width:640px; margin:0 auto;">
     <div class="card">
-        <h2 style="color:#6b4f3a; margin-bottom:1.5rem;">Editează intrarea</h2>
+        <h2 style="color:#6b4f3a; margin-bottom:1.5rem;">Editează notita</h2>
 
         <form method="POST" action="{{ route('entries.update', $entry) }}">
             @csrf

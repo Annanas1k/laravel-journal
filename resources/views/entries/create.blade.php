@@ -5,7 +5,7 @@
 @section('content')
 <div style="max-width:640px; margin:0 auto;">
     <div class="card">
-        <h2 style="color:#6b4f3a; margin-bottom:1.5rem;">Intrare nouă în jurnal</h2>
+        <h2 style="color:#6b4f3a; margin-bottom:1.5rem;">Notita nouă în jurnal</h2>
 
         <form method="POST" action="{{ route('entries.store') }}">
             @csrf
